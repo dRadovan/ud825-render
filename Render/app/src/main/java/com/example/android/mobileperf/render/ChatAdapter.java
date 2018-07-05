@@ -70,7 +70,6 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
                 DateUtils.MINUTE_IN_MILLIS,
                 DateUtils.FORMAT_ABBREV_RELATIVE));
 
-
         // Display the chat author's avatar (a droid image) and a background color associated with
         // the author.
         if (chat.getAuthor().getAvatarId() == 0) {
