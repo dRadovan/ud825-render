@@ -96,8 +96,20 @@ class DroidCardsView extends View {
             for (int i = 0; i < mDroidCards.size(); i++) {
                 // Each card is laid out a little to the right of the previous one.
                 mCardLeft = i * mCardSpacing;
+                // save existing canvas state
+                canvas.save();
+                // restrict drawing to only whats visible
+                canvas.clipRect(mCardLeft,
+                        0,
+                        mCardLeft + mCardSpacing,
+                         mDroidCards.get(i).getHeight());
+
                 drawDroidCard(canvas, mDroidCards.get(i), mCardLeft, 0);
+                // revert canvas to a non-clipping state
+                canvas.restore();
             }
+            // draw the top card without clipping
+            drawDroidCard(canvas, mDroidCards.get(mDroidCards.size()-1), mCardLeft + mCardSpacing, 0);
         }
 
         // Invalidate the whole view. Doing this calls onDraw() if the view is visible.
