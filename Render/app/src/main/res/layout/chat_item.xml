@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
@@ -29,7 +30,8 @@
                 android:layout_alignParentLeft="true"
                 android:padding="@dimen/narrow_space"
                 android:gravity="bottom"
-                android:id="@+id/chat_author_name" />
+                android:id="@+id/chat_author_name"
+                tools:text="Rado"/>
 
             <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
@@ -37,14 +39,16 @@
                 android:layout_alignParentRight="true"
                 android:textStyle="italic"
                 android:padding="@dimen/narrow_space"
-                android:id="@+id/chat_datetime" />
+                android:id="@+id/chat_datetime"
+                tools:text="29 October"/>
         </RelativeLayout>
 
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/narrow_space"
-            android:id="@+id/chat_text" />
+            android:id="@+id/chat_text"
+            tools:text="Chat text comes in here and hopefully it makes some sense"/>
     </LinearLayout>
 
 </LinearLayout>

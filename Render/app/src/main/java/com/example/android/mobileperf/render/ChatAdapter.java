@@ -47,7 +47,7 @@ public class ChatAdapter extends ArrayAdapter<Chat> {
         Chat chat = getItem(position);
         if (view == null) {
             view = LayoutInflater.from(getContext()).inflate(
-                    R.layout.chat_item, parent, false);
+                    R.layout.chat_item_cl, parent, false);
         }
 
         // Find the UI widgets for a chat item.
